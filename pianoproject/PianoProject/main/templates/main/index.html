@@ -1,0 +1,33 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+
+{% block content %}
+<div class="features">
+    <h1>{{ title }}</h1>
+    <div>
+       {% if data %}
+            {% for i in data %}
+
+                <div class="col-12  m-3 ">
+                    <div class="card h-80  mt-3 mb-3 ">
+                            <div class="card-body">
+                                  <h5 class="card-title">{{i.title}}</h5>
+                                <button class="btn btn-warning ">Купить</button>
+                            </div>
+
+                    </div>
+                </div>
+
+          {% endfor %}
+        {% else %}
+            <p>Товары отсутствуют</p>
+        {% endif %}
+    </div>
+
+
+</div>
+{% endblock %}

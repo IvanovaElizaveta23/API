@@ -1,0 +1,34 @@
+
+{% extends 'main/layout.html' %}
+{% load static %}
+
+
+{% block title %}
+    Главная страница
+{% endblock %}
+
+{% block content %}
+<div class="container pt-5">
+    <div class="row  ">
+        {% if product %}
+            {% for i in product %}
+
+                <div class="col-12 col-md-3 mb-3">
+                    <div class="card h-80  mt-3 mb-3 ">
+                            <div class="card-body">
+                                <img class="image" src="{{MEDIA_URL}}{{i.photo.url}}" alt="image" width="200px">
+                                  <h5 class="card-title">{{i.title}}</h5>
+                                    <p class="card-text">Цена: {{i.price}} руб</p>
+                                <button class="btn btn-block bg-danger text-light">Купить</button>
+                            </div>
+
+                    </div>
+                </div>
+
+          {% endfor %}
+        {% else %}
+            <p>Товары отсутствуют</p>
+        {% endif %}
+    </div>
+</div>
+{%endblock%}

@@ -1,0 +1,271 @@
+
+{% extends 'main/layout.html' %}
+{% load static %}
+
+
+{% block title %}
+    Главная страница
+{% endblock %}
+
+{% block content %}
+
+<div class="container pt-5">
+
+    <div class="row mt-5 mb-3 ">
+        <div class="col-12">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <img src="{% static 'main/img/11.png' %}"
+                                 class="embed-responsive-item" alt="...">
+                        </div>
+                        <!--
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Метка третьего слайда</h5>
+                            <p>Некоторый репрезентативный заполнитель для первого слайда.</p>
+                        </div>
+                        -->
+                    </div>
+                    <div class="carousel-item">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <img src="{% static 'main/img/22.jpg' %}"
+                                 class="embed-responsive-item" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <!--
+                               <h5>Метка второго слайда</h5>
+                               <p>Некоторый репрезентативный заполнитель для второго слайда.</p>
+                               -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <img src="{% static 'main/img/33.png' %}"
+                                 class="embed-responsive-item" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <!--
+                               <h5>Метка третьего слайда</h5>
+                               <p>Некоторый репрезентативный заполнитель для третьего слайда.</p>
+                               -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Предыдущий</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Следующий</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <form>
+        <div class="form-row">
+            <div class="col-md-9 ">
+                <p><input type="search" name="q" placeholder="Поиск по сайту"
+                          class="btn-block btn-outline-danger bg-light text-center">
+            </div>
+            <div class="col-md-3 ">
+                <input type="submit" value="Найти" class="btn-block btn-outline-danger text-dark"></p>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<div class="container">
+    <h4 class="btn-block text-center">Лидеры продаж</h4>
+</div>
+
+<div class="container ">
+    <div class="row  ">
+        <div class="col-12 col-md-3 mb-3">
+            <div class="card h-80  mt-3 mb-3 ">
+                <img src="{% static 'main/img/p1.jpg' %}"
+                     class="card-img-top" alt="...">
+                <div class="card-body  ">
+                    <h5 class="card-title">Цифровое пианино Yamaha NP-12 B</h5>
+                    <p class="card-text" style="font-size: 14px;">Yamaha NP 12 - бюджетный вариант цифрового пианино.
+                        Инструмент приятно удивляет своей легкостью - вес модели всего 4,5 кг. Его просто носить с
+                        собой. Сыграть любимую мелодию можно даже на улице. Аппарат работает не только от сети, но и от
+                        батареек</p>
+
+                    <a href="tovar001.html" class="btn btn-danger btn-block">Подробнее</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-3  mb-3">
+            <div class="card h-80   mt-3 mb-3">
+                <img src="{% static 'main/img/p2.jpg' %}"
+                     class="card-img-top" alt="...">
+                <div class="card-body ">
+                    <h5 class="card-title">Цифровое пианино Artesia Performer White</h5>
+                    <p class="card-text" style="font-size: 14px;">Новое цифровое фортепиано Performer - это стильный
+                        инструмент с 88 клавишами, который обеспечивает выразительный и мощный звук благодаря встроенной
+                        акустической системе с 4 динамиками.</p>
+                    <a href="tovar001.html" class="btn btn-danger btn-block">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-3 mb-3">
+            <div class="card h-80  mt-3 mb-3">
+                <img src="{% static 'main/img/p3.jpg' %}"
+                     class="card-img-top" alt="...">
+                <div class="card-body ">
+                    <h5 class="card-title">Цифровое пианино Artesia FUN-1 WH</h5>
+                    <p class="card-text" style="font-size: 14px;">Artesia FUN-1 - это не игрушка, это настоящее цифровое
+                        пианино, созданное специально для детей. Оно не только подходит им по размерам, но также просто
+                        в использовании, компактно и невероятно красиво! Оно порадует и слух, и зрение всех членов
+                        семьи!
+                    </p>
+                    <a href="tovar001.html" class="btn btn-danger btn-block">Подробнее</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-3 mb-3">
+            <div class="card h-80  mt-3 mb-3">
+               <img src="{% static 'main/img/p4.jpg' %}"
+                     class="card-img-top" alt="...">
+                <div class="card-body ">
+                    <h5 class="card-title">Цифровое пианино Artesia DP-10e Rosewood</h5>
+                    <p class="card-text" style="font-size: 14px;">Цифровое пианино Artesia DP-10e Rosewood наполнит ваш
+                        дом своим глубоко выразительным звуком концертного зала и украсит любой интерьер с помощью
+                        своего традиционного кабинетного корпуса.</p>
+                    <a href="tovar001.html" class="btn btn-danger btn-block">Подробнее</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-3 mb-3">
+            <div class="card h-80 mt-3 mb-3">
+                <img src="{% static 'main/img/g1.jpg' %}"
+                     class="card-img-top" alt="...">
+                <div class="card-body ">
+                    <h5 class="card-title">Электрогитара Fender SQUIER MM STRATOCASTER HARD TAIL BLACK</h5>
+                    <p class="card-text" style="font-size: 14px;">Это подходящий инструмент для новичков, который
+                        позволит попробовать себя в различных музыкальных стилях. Электрогитара Fender SQUIER MM
+                        STRATOCASTER HARD TAIL выполняется из качественной клееной древесины, у нее приятное звучание и
+                        демократичная цена.</p>
+                    <a href="tovar001.html" class="btn btn-danger btn-block">Подробнее</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-3 mb-3">
+            <div class="card h-80 mt-3 mb-3">
+                <img src="{% static 'main/img/g2.jpg' %}"
+                     class="card-img-top" alt="...">
+                <div class="card-body ">
+                    <h5 class="card-title">Электрогитара Ibanez JEM-JR WH</h5>
+                    <p class="card-text" style="font-size: 14px;">Представляем вашему вниманию белую электрогитару
+                        Ibanez JEM-JR от компании Ibanez. Эта модель позиционируется как подписная – известного
+                        гитариста-виртуоза Стива Вая. Но купить гитару Ibanez JEM-JR стоит не только поклонникам
+                        музыканта, но и просто любителям качественных и комфортных инструментов. </p>
+                    <a href="tovar001.html" class="btn btn-danger btn-block">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-3 mb-3">
+            <div class="card h-80 mt-3 mb-3">
+                <img src="{% static 'main/img/g3.jpg' %}"
+                     class="card-img-top" alt="...">
+                <div class="card-body ">
+                    <h5 class="card-title">Электрогитара Jackson JS11 DK, AH FB, 22 Fr BLK</h5>
+                    <p class="card-text" style="font-size: 14px;">JACKSON JS11 DK AH FB 22 Fr - это шестиструнная
+                        электрогитара популярной линейки Dinky. Электрогитары бренда Jackson являются весьма известными
+                        и востребованными среди рок-гитаристов. Электрогитара имеет аутентичное роковое звучание,
+                        классический стиль деки и головы грифа. </p>
+                    <a href="tovar001.html" class="btn btn-danger btn-block">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-3 mb-3">
+            <div class="card h-80 mt-3 mb-3">
+                <img src="{% static 'main/img/g4.jpg' %}"
+                     class="card-img-top" alt="...">
+                <div class="card-body ">
+                    <h5 class="card-title">Электрогитара Jackson JS1X RR, Minion, AH FB-SBK</h5>
+                    <p class="card-text" style="font-size: 14px;">RR
+                        Minion JS1X отличается от полноразмерных гитар укороченной (2/3 стандартной) мензурой 22,5’’
+                        (572 мм) и отлично подойдет для начинающих музыкантов, в том числе для подростков, девушек или
+                        взрослых с небольшим размером руки, а также в качестве компактного инструмента для
+                        путешествий. </p>
+                    <a href="tovar001.html" class="btn btn-danger btn-block">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="btn btn-danger btn-block">Показать ещё</a>
+</div>
+
+<div class="container ">
+    <div class="card text-center mt-3">
+
+        <div class="card-body">
+            <h5 class="card-title">Особое обращение с титулом</h5>
+            <p class="card-text">С вспомогательным текстом ниже в качестве естественного перехода к дополнительному
+                контенту.</p>
+
+            <form class="needs-validation" novalidate>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationTooltip01">Имя</label>
+                        <input type="text" class="form-control btn-outline-danger bg-light" id="validationTooltip01" placeholder="Имя" value=" "
+                               required>
+                        <div class="valid-tooltip">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationTooltip02">Фамилия</label>
+                        <input type="text" class="form-control btn-outline-danger bg-light" id="validationTooltip02" placeholder="Фамилия"
+                               value=" " required>
+                        <div class="valid-tooltip">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationTooltipUsername">Почта</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+
+                            </div>
+                            <input type="text" class="form-control btn-outline-danger bg-light" id="validationTooltipUsername" placeholder=""
+                                   aria-describedby="validationTooltipUsernamePrepend" required>
+                            <div class="invalid-tooltip">
+                                Please choose a unique and valid username.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-danger" type="submit">Подписаться</button>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <footer class="text-center ">
+        <p><a href="mailto:hege@example.com" class="text-danger">ya@example.com</a></p>
+    </footer>
+</div>
+
+{% endblock %}
